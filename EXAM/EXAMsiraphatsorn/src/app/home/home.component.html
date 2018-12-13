@@ -1,0 +1,43 @@
+<app-content>
+  <div>
+    <br>
+  <div>
+<div class="pull-right">
+  
+    <button type="button" class="btn btn-success"(click)="gotoCreateHotel()">เพิ่มข้อมูล</button>
+  
+</div>
+  </div>
+  <br>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            
+            <th scope="col">ชื่อโรงเเรม</th>
+            <th scope="col">ที่อยู่</th>
+            <th scope="col">ราคา</th>
+            
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of hotel">
+              
+            <td class="table-primary" >{{item.nameHotel}}</td>
+            <td class="table-primary" >{{item.addHotel}}</td>
+            <td class="table-primary" >{{item.priceHotel}}</td>
+            
+            <td class="table-warning">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button class="btn btn-info" [routerLink]="['/home/edit',item.personID]">แก้ไข</button>
+                  <button type="button" (click)="onDeleteData(item.personID)" class="btn btn-danger">ลบ</button>
+                </div>
+          </td>
+        </tr>
+          
+        </tbody>
+      </table>
+      
+      
+</div>
+</app-content>

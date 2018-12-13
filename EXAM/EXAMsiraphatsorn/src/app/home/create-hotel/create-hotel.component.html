@@ -1,0 +1,32 @@
+<app-content>
+  <form [formGroup]="form"(submit)="onSubmit()">
+    <div class="row">
+   
+      <label for="">ชื่อโรงแรม</label>
+      <input type="text" class="form-control"  formControlName="NameHotel">
+     
+    </div>
+    
+
+    <div class="row">
+   
+      <label for="">ที่อยู่</label>
+      <input type="text" class="form-control" formControlName="AddHotel">
+    </div>
+    
+    <div class="row">
+   
+        <label for="">ราคา</label>
+        <input type="text" class="form-control" formControlName="PriceHotel">
+      </div>
+     
+      <div class="pull-right">
+
+        <button type="submit" class="btn btn-primary">เพิ่มข้อมูล</button>
+      
+    </div>
+            
+                
+    
+  </form>
+</app-content>
